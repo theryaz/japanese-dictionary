@@ -1,9 +1,16 @@
 version: '2'
 services:
-  manager:
-    image: veden/vue
+  app:
+    image: veden/nodejs:8.0.0-alpine
     ports:
-      - 4200:4200
+      - 8080:8080
     volumes:
       - ./japanese-study:/app
-    command: ng serve --host 0.0.0.0
+    command: npm start
+  api:
+    image: veden/nodejs:nodemon
+    ports:
+      - 8082:8082
+    volumes:
+      - ./japanese-api:/app
+    command: nodemon index.js
