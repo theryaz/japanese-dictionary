@@ -23,10 +23,9 @@ app.use(cors({
 
 app.use(body_parser.json()); // ensure we have access to req.body in routes
 
-app.get('/api/v1', function(req, res){
+app.get('/api/v1', (req, res) => {
 	res.send('Welcome to the 日本語 API!');
 });
-
 
 app.use((err,req,res,next)=>{
 	if(err){

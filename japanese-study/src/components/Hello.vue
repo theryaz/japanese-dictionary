@@ -16,7 +16,7 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      jisho_api: 'http://jisho.org/api/v1',
+      jisho_api: 'http://localhost:8083/api/v1',
       word: 'house'
     }
   },
